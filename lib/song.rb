@@ -2,7 +2,6 @@ class Song
     @@count=0
     @@genres=[]
     @@artists=[]
-    @@genre_name=""
 
     attr_accessor :name,:artist,:genre
 
@@ -11,11 +10,12 @@ class Song
     def initialize (name,artist,genre)
         @name=name
         @artist=artist
-        @@artists=@@artists<<artist
         @genre=genre
-        @@count =@@count+1
+        @@artists=@@artists<<artist
         @@genres=@@genres<<genre
-        @@genre_name=genre
+        @@count =@@count+1
+       
+    
     end
 
     def self.count
@@ -41,7 +41,6 @@ class Song
     #  end
 
       @@genres.tally
-
 
     end
 
